@@ -6,4 +6,4 @@ Adam J. Crowder. Adaptive & Multilevel Stochastic Galerkin Finite Element Method
 
 A.J. Crowder, C.E. Powell, and A. Bespalov. Efficient adaptive multilevel stochastic Galerkin approximation using implicit a posteriori error estimation. SIAM J. Sci. Comput., 41(3), A1681-A1705 (2019), https://doi.org/10.1137/18M1194420.
 
-Instructions on installing and running the code are provided in the <b> User Guide </b>
+Instructions on installing and running the code are provided in the <b> User Guide. </b>
