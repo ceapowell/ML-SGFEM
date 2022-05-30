@@ -9,6 +9,8 @@ The MATLAB code in this repository is associated with the following works:
 
 </ul>
 and can be used with MATLAB version R2017b or later. 
+
 <br> 
+<br>
 
 Instructions on installing and running the software, and a sample session for a specific testproblem are provided in the <b> User Guide. </b> 
