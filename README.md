@@ -13,4 +13,4 @@ and can be used with MATLAB version R2017b or later.
 <br> 
 <br>
 
-Instructions on installing and running the software, and a sample session for a specific testproblem are provided in the <b> User Guide. </b> 
+Instructions on installing and running the software, and a sample session for a specific testproblem are provided in the <b> User Guide. </b> It is advisable to read this first.
