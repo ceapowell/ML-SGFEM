@@ -1,0 +1,378 @@
+>> helpme
+ 
+To run the software in MATLAB: 
+ 
+1. You should have installed MATLAB version >= 2017b
+2. If you have installed IFISS, S-IFISS or T-IFISS, remove from current search path
+3. Change current working directory to ../stoch_diffusion_multilevel
+4. Change the path in gohome.m to the current working directory
+5. Type setpath at command prompt to add folders/files to current path
+6. Run driver ML_adapt_SGFEM_pc.m (Windows) or ML_adapt_SGFEM.m (Mac/Linux)
+7. Select a test problem and follow instructions on screen.
+ 
+>> setpath
+
+>> ML_adapt_SGFEM
+
+Choose dimension of spatial domain: 2/3 (2D/3D) (default: 2D) : 2
+
+Choose stochastic diffusion test problem
+     1  Square domain [-1,1]x[-1,1], analytic KL expansion, non-constant source
+     2  Square domain [0,1]x[0,1],   Eigel synthetic random coefficient,  constant source
+     3  Square domain [0,1]x[0,1],   Powell synthetic random coefficient, constant source
+     4  L-shaped domain,             Eigel synthetic random coefficient,  constant source
+ : 2
+
+Setting up Eigel synthetic random coefficient expansion
+--slow/fast coefficient decay 1/0  (default slow) : 
+
+Specify initial SGFEM approximation space
+--No. of parameters to activate at first step (default is 1) : 
+--Total polynomial degree for parametric approximation at first step (default is 1) : 
+--Choose Q1(h)/Q2(h) spatial approximation 1/2? (default Q1) : 
+--Coarse grid parameter: 3 for underlying 8x8 grid (default is 16x16) : 
+
+Desired energy error tolerance (1.5e-3) : 3e-3
+
+Specify approximation space for error estimator
+--Spatial error approximation space Q2(h)/Q1(h/2), 1/2? (default Q2(h)) : 
+--Max no. extra parameters to activate in parametric space for error estimator (default is 5) : 
+
+Choose the adaptive strategy 1/2  (default version 1) : 
+
+Printing, plotting and saving
+--Display diagnostics on screen at each adaptive step? yes/no (1/0) (default yes)  : 
+--Plot estimated errors and convergence rates? yes/no (1/0) (default yes)  : 
+--Compute reference errors and plot effectivity indices? yes/no (1/0) (default yes)  : 
+--Plot mean/variance of final approximation? yes/no (1/0) (default yes)  : 
+--Display info about evolution of parametric space? yes/no (1/0) (default yes)  : 
+--Save ML-SGFEM results? yes/no (1/0) (default yes)  : 
+
+Constructing SGFEM approximation ...
+===================================================
+Iteration  = 1.
+===================================================
+
+    Grid_levels    No_of_terms
+    ___________    ___________
+
+         4              2     
+
+--------------------------------------------
+No of activated variables = 1.
+
+Constructing G and K matrices and RHS ...
+ Solving linear system using PCG ...
+ completed
+PCG converged to the desired tolerance within 11 iterations
+completed
+
+Computing reference energy error ... completed
+         Solution energy        = 1.89178868e-01.
+         Reference energy error = 1.8865e-02.
+
+Computing spatial error estimate ... completed
+  Spatial error estimate = 1.4534e-02.
+
+Computing parametric error estimate ... completed
+  Parametric error estimate = 1.0300e-02.
+
+           Cumulative time = 0.16 seconds.
+Total energy error estimate = 1.7814e-02.
+          Effectivity index = 0.94.
+
+===================================================
+Iteration  = 2.
+===================================================
+
+    Grid_levels    No_of_terms
+    ___________    ___________
+
+         4              1     
+         5              1     
+
+--------------------------------------------
+No of activated variables = 1.
+
+Constructing G and K matrices and RHS ...
+ 
+Solving linear system using PCG ...
+ completed
+PCG converged to the desired tolerance within 12 iterations
+completed
+
+Computing reference energy error ... completed
+         Solution energy        = 1.89577248e-01.
+         Reference energy error = 1.4317e-02.
+
+Computing spatial error estimate ... completed
+  Spatial error estimate = 8.4084e-03.
+
+Computing parametric error estimate ... completed
+  Parametric error estimate = 1.0288e-02.
+
+           Cumulative time = 0.30 seconds.
+Total energy error estimate = 1.3287e-02.
+          Effectivity index = 0.93.
+
+===================================================
+Iteration  = 3.
+===================================================
+
+    Grid_levels    No_of_terms
+    ___________    ___________
+
+         4              4     
+         5              1     
+
+--------------------------------------------
+No of activated variables = 1.
+
+Constructing G and K matrices and RHS ...
+ Solving linear system using PCG ...
+ completed
+PCG converged to the desired tolerance within 12 iterations
+completed
+
+Computing reference energy error ... completed
+         Solution energy        = 1.89844944e-01.
+         Reference energy error = 1.0169e-02.
+
+Computing spatial error estimate ... 
+completed
+  Spatial error estimate = 8.5475e-03.
+
+Computing parametric error estimate ... completed
+  Parametric error estimate = 3.9259e-03.
+
+           Cumulative time = 0.43 seconds.
+Total energy error estimate = 9.4060e-03.
+          Effectivity index = 0.92.
+
+===================================================
+Iteration  = 4.
+===================================================
+
+    Grid_levels    No_of_terms
+    ___________    ___________
+
+         4              5     
+         5              1     
+
+--------------------------------------------
+No of activated variables = 3.
+
+Constructing G and K matrices and RHS ...
+ Solving linear system using PCG ...
+ completed
+PCG converged to the desired tolerance within 12 iterations
+completed
+
+Computing reference energy error ... completed
+         Solution energy        = 1.89863072e-01.
+         Reference energy error = 9.8252e-03.
+
+Computing spatial error estimate ... completed
+  Spatial error estimate = 8.5500e-03.
+
+Computing parametric error estimate ... completed
+  Parametric error estimate = 3.1129e-03.
+
+           Cumulative time = 0.50 seconds.
+Total energy error estimate = 9.0991e-03.
+          Effectivity index = 0.93.
+
+===================================================
+Iteration  = 5.
+===================================================
+
+    Grid_levels    No_of_terms
+    ___________    ___________
+
+         4              4     
+         5              1     
+         6              1     
+
+--------------------------------------------
+No of activated variables = 3.
+
+Constructing G and K matrices and RHS ...
+ Solving linear system using PCG ...
+ completed
+PCG converged to the desired tolerance within 15 iterations
+completed
+
+Computing reference energy error ... completed
+         Solution energy        = 1.90018053e-01.
+         Reference energy error = 6.1369e-03.
+
+Computing spatial error estimate ... completed
+  Spatial error estimate = 4.6465e-03.
+
+Computing parametric error estimate ... completed
+  Parametric error estimate = 3.1095e-03.
+
+           Cumulative time = 0.87 seconds.
+Total energy error estimate = 5.5909e-03.
+          Effectivity index = 0.91.
+
+===================================================
+Iteration  = 6.
+===================================================
+
+    Grid_levels    No_of_terms
+    ___________    ___________
+
+         4             10     
+         5              1     
+         6              1     
+
+--------------------------------------------
+No of activated variables = 3.
+
+Constructing G and K matrices and RHS ...
+ Solving linear system using PCG ...
+ completed
+PCG converged to the desired tolerance within 13 iterations
+completed
+
+Computing reference energy error ... completed
+         Solution energy        = 1.90042538e-01.
+         Reference energy error = 5.3250e-03.
+
+Computing spatial error estimate ... completed
+  Spatial error estimate = 4.6816e-03.
+
+Computing parametric error estimate ... completed
+  Parametric error estimate = 1.3664e-03.
+
+           Cumulative time = 1.15 seconds.
+Total energy error estimate = 4.8769e-03.
+          Effectivity index = 0.92.
+
+===================================================
+Iteration  = 7.
+===================================================
+
+    Grid_levels    No_of_terms
+    ___________    ___________
+
+         4              8     
+         5              2     
+         6              2     
+
+--------------------------------------------
+No of activated variables = 6.
+
+Constructing G and K matrices and RHS ...
+ Solving linear system using PCG ...
+ completed
+PCG converged to the desired tolerance within 15 iterations
+completed
+
+Computing reference energy error ... completed
+         Solution energy        = 1.90064633e-01.
+         Reference energy error = 4.4673e-03.
+
+Computing spatial error estimate ... completed
+  Spatial error estimate = 3.9176e-03.
+
+Computing parametric error estimate ... completed
+  Parametric error estimate = 1.3668e-03.
+
+           Cumulative time = 1.35 seconds.
+Total energy error estimate = 4.1492e-03.
+          Effectivity index = 0.93.
+
+===================================================
+Iteration  = 8.
+===================================================
+
+    Grid_levels    No_of_terms
+    ___________    ___________
+
+         4             10     
+         5              2     
+         6              2     
+
+--------------------------------------------
+No of activated variables = 6.
+
+Constructing G and K matrices and RHS ...
+ Solving linear system using PCG ...
+ completed
+PCG converged to the desired tolerance within 12 iterations
+completed
+
+Computing reference energy error ... completed
+         Solution energy        = 1.90066180e-01.
+         Reference energy error = 4.4010e-03.
+
+Computing spatial error estimate ... completed
+  Spatial error estimate = 3.9193e-03.
+
+Computing parametric error estimate ... completed
+  Parametric error estimate = 1.1814e-03.
+
+           Cumulative time = 1.45 seconds.
+Total energy error estimate = 4.0934e-03.
+          Effectivity index = 0.93.
+
+===================================================
+Iteration  = 9.
+===================================================
+
+    Grid_levels    No_of_terms
+    ___________    ___________
+
+         4              9     
+         5              3     
+         6              1     
+         7              1     
+
+--------------------------------------------
+No of activated variables = 6.
+
+Constructing G and K matrices and RHS ...
+ Solving linear system using PCG ...
+ completed
+PCG converged to the desired tolerance within 17 iterations
+completed
+
+Computing reference energy error ... completed
+         Solution energy        = 1.90092545e-01.
+         Reference energy error = 3.0571e-03.
+
+Computing spatial error estimate ... completed
+  Spatial error estimate = 2.4782e-03.
+
+Computing parametric error estimate ... completed
+  Parametric error estimate = 1.1813e-03.
+
+           Cumulative time = 3.10 seconds.
+Total energy error estimate = 2.7453e-03.
+          Effectivity index = 0.90.
+
+===================================================
+-------------- Convergence achieved! --------------
+===================================================
+Elapsed time is 3.101121 seconds.
+Reference error = 3.0571e-03.
+Estimated error = 2.7453e-03.
+Total iterations = 9.
+Total #DOF       = 25006.
+
+    final_Grid_levels    No_of_terms
+    _________________    ___________
+
+            4                 9     
+            5                 3     
+            6                 1     
+            7                 1     
+
+Total no. of activated variables = 6.
+
+Computing statistics ... completed
+  Max expectation = 7.5810e-02.
+     Max variance = 5.0144e-05.
+
