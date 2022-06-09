@@ -20,5 +20,11 @@ Instructions on installing and running the software, and a sample session for a 
 
 To cite the User Guide, please use:
 <ul>
-<li> George Papanikos and Catherine E. Powell, ML-SGFEM User Guide. Manchester Institute of Mathematical Sciences (MIMS) Eprint 2022.8, (2022). 
+<li> George Papanikos and Catherine E. Powell, ML-SGFEM User Guide. Manchester Institute of Mathematical Sciences (MIMS) Eprint 2022.8, 2022. 
+ http://eprints.maths.manchester.ac.uk/2859/
+ </ul>
+
+To cite the code (current version), please use:
+<ul>
+<li> Adam Crowder, George Papanikos and Catherine E. Powell, ML-SGFEM Software Version 1.0, 2022. https://github.com/ceapowell/ML-SGFEM/
  </ul>
