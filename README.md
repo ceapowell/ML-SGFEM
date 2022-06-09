@@ -1,6 +1,6 @@
 # ML-SGFEM
 
-The <b> MATLAB code </b> in this repository is associated with the following works:
+The <b> MATLAB code </b> in this repository (download the .zip file) is associated with the following works:
 
 <ul>
 <li> Adam J. Crowder. Adaptive & Multilevel Stochastic Galerkin Finite Element Methods, Ph.D Thesis, Department of Mathematics, University of Manchester, 2020. https://www.research.manchester.ac.uk/portal/files/159166686/FULL_TEXT.PDF
